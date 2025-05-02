@@ -74,15 +74,20 @@ st.markdown("""
             color: black;
             text-align: center;
         }
-        .score-box {
-            background: linear-gradient(to right, #34d399, #10b981);
-            padding: 10px;
-            border-radius: 8px;
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
+        .social-icon {
+               text-align: center;
+                margin-top: 10px;
+                  }
+        .social-icon img {
+               height: 30px;
+               width: 30px;
+               margin: 0 10px;
+               vertical-align: middle;
+               transition: transform 0.2s ease-in-out;
+}
+         .social-icon img:hover {
+                    transform: scale(1.2);
+}
         .footer {
             text-align: center;
             font-size: 14px;
@@ -250,3 +255,26 @@ st.markdown("""
         </div>
             </div>
 """, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+ # .score-box {
+        #     background: linear-gradient(to right, #34d399, #10b981);
+        #     padding: 10px;
+        #     border-radius: 8px;
+        #     color: white;
+        #     text-align: center;
+        #     font-size: 24px;
+        #     font-weight: bold;
+        # }
+'''

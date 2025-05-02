@@ -8,7 +8,6 @@ import re
 import random
 import plotly.express as px
 import ast
-from randon.com import cc_visit
 from streamlit.lottie import st_lottie
 import requests
 

@@ -12,12 +12,18 @@ from streamlit_lottie import st_lottie
 import requests
 
 st.set_page_config(page_title='Code Formatter and Optimaizer', page_icon='📊', layout='wide')
+# @st.cache_data
+# def load_lottie_url(url:str):
+#     res = requests.get(url)
+#     if res.status_code != 200 :
+#         return None
+#     return res.json
 @st.cache_data
-def load_lottie_url(url:str):
+def load_lottie_url(url: str):
     res = requests.get(url)
-    if res.status_code != 200 :
+    if res.status_code != 200:
         return None
-    return res.json
+    return res.json()  # <- Add the parentheses to call the function
 
 animation = load_lottie_url('https://assets10.lottiefiles.com/packages/lf20_j1adxtyb.json')
 
@@ -49,7 +55,7 @@ with col2:
     else:
         st.warning("⚠️ Failed to load animation")
 
-with st.slider:
+with st.container():
     st.markdown('<div class ="feature-box"><h2>🔧Feature </h2>   <p> Refactor, Analyzer code , Optimized your give code</p></div>',unsafe_allow_html=True)
     st.markdown('<div class= "doc-box"> <h3> 📕Documentation </h3> <p>Get Stared with AI-driven optimization</p></div>', unsafe_allow_html=True)
 

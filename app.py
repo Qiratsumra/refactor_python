@@ -82,7 +82,6 @@ st.markdown("""
                height: 30px;
                width: 30px;
                margin: 0 10px;
-               vertical-align: middle;
                transition: transform 0.2s ease-in-out;
 }
          .social-icon img:hover {

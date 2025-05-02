@@ -8,7 +8,7 @@ import re
 import random
 import plotly.express as px
 import ast
-from streamlit.lottie import st_lottie
+from streamlit_lottie import st_lottie
 import requests
 
 st.set_page_config(page_title='Code Formatter and Optimaizer', page_icon='📊', layout='wide')

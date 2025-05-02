@@ -267,7 +267,7 @@ st.markdown("""
 
 
 
-'''
+
  # .score-box {
         #     background: linear-gradient(to right, #34d399, #10b981);
         #     padding: 10px;
@@ -277,4 +277,3 @@ st.markdown("""
         #     font-size: 24px;
         #     font-weight: bold;
         # }
-'''

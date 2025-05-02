@@ -249,7 +249,7 @@ st.markdown("""
             <br>
             Senior Student
         <div class='social-icons'>
-            <a href="https://github.com/qiratsumra"><i class="icon-github"></i> icon-github</a>
+            <a href="https://github.com/qiratsumra"><i class="icon-github"></i></a>
             <a href="https://www.linkedin.com/in/qirat-saeed-8048662b7/"></a>
         </div>
             </div>

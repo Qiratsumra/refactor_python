@@ -1,6 +1,6 @@
 import streamlit as st
 import black # code formatter
-import _isort # arranged the code
+import isort # arranged the code
 import subprocess
 import tempfile # stored tempory data file
 import base64  
@@ -66,7 +66,7 @@ with tabs[0]:
     code_input = st.text_area('Paste your code here: ', value=st.session_state.code_input, height=200, key='input_code')
 
 def refactored_code(code):
-    sorted_code = _isort.code(code)
+    sorted_code = isort.code(code)
     formatted_code = black.format_file_contents(sorted_code, fast= False, mode=black.Mode())
     with tempfile.NamedTemporaryFile(delete=False, suffix='python', mode='w') as tmp_file:
          tmp_file.write(formatted_code)

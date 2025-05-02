@@ -78,13 +78,13 @@ st.markdown("""
                text-align: center;
                 margin-top: 10px;
                   }
-        .social-icon img {
+        .social-icon a img {
                height:30px;
                width:30px;
                margin: 0 10px;
                transition: transform 0.2s ease-in-out;
 }
-         .social-icon img:hover {
+         .social-icon a img:hover {
                     transform: scale(1.2);
 }
         .footer {

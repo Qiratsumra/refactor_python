@@ -27,23 +27,77 @@ def load_lottie_url(url: str):
 
 animation = load_lottie_url('https://assets10.lottiefiles.com/packages/lf20_j1adxtyb.json')
 
-st.markdown("""
-          <style>
-            .big-title { text-align: center; font-size: 3em; color:#2575fc; font-weight:bold}
+# st.markdown("""
+#           <style>
+#             .big-title { text-align: center; font-size: 3em; color:#2575fc; font-weight:bold}
             
-            .subtitle { text-align: center; font-size: 20px; color: #444; font-style:italic;}
+#             .subtitle { text-align: center; font-size: 20px; color: #444; font-style:italic;}
             
-            .feature-box {background: linear-gradient(to right, #6a11cb, #2575fc); padding: 15px; border-radius: 8px; color:white; text-align:centre; margin-bottom:20px;}
+#             .feature-box {background: linear-gradient(to right, #6a11cb, #2575fc); padding: 15px; border-radius: 8px; color:white; text-align:centre; margin-bottom:20px;}
             
-            .doc-box {background: linear-gradient (to right, #34d399, #10b981); padding: 15px; border-radius:8px; color:white; text-align:center;}
+#             .doc-box {background: linear-gradient (to right, #34d399, #10b981); padding: 15px; border-radius:8px; color:black; text-align:center;}
             
-            .score-box {background: linear-gradient (to right, #34d399, #10b981); padding: 10px; border-radius:8px; color:white; text-align:center; font-size: 24px; font-weight:bold;}
+#             .score-box {background: linear-gradient (to right, #34d399, #10b981); padding: 10px; border-radius:8px; color:white; text-align:center; font-size: 24px; font-weight:bold;}
             
-            .footer { text-align: center; font-size:14px; color: #aaa; margin-top:40px; }
+#             .footer { text-align:center; font-size:14px; color: #aaa; margin-top:40px; }
 
-            .social-icon img {height:50px;width:25px; margin: 0 5px; vertical-align: middle;}
-            </style>
+#             .social-icon img {height:50px;width:25px; margin: 0 5px; vertical-align: middle;}
+#             </style>
+# """, unsafe_allow_html=True)
+
+st.markdown("""
+    <style>
+        .big-title {
+            text-align: center;
+            font-size: 3em;
+            color: #2575fc;
+            font-weight: bold;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #444;
+            font-style: italic;
+        }
+        .feature-box {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .doc-box {
+            background: linear-gradient(to right, #34d399, #10b981);
+            padding: 15px;
+            border-radius: 8px;
+            color: black;
+            text-align: center;
+        }
+        .score-box {
+            background: linear-gradient(to right, #34d399, #10b981);
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 40px;
+        }
+        .social-icon img {
+            height: 50px;
+            width: 25px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+    </style>
 """, unsafe_allow_html=True)
+
 
 col1,col2 = st.columns([2,1])
 with col1:
@@ -105,11 +159,22 @@ def plot_import_usage(imports):
 
 def download_button (code):
     b64 = base64.b64encode(code.encode()).decode()
+#     return f"""
+#       <div class ='download-btn' style='text-align: center; padding: 10px;'>
+#       <a href='data:file/txt;based64{b64}' download = 'refactored.py' style= 'background:linear-gradient(to right, #6a11cb,#2575fc); padding: 12px 20px; border-radius: 8px; color: white; text-align: center; font-weight: bold font-size:18px; text-decoration:none;'>📅 Download Refactored Code </a>
+#       </div>
+# """
     return f"""
-      <div class ='download-btn' style='text-align: center; padding: 10px;'>
-      <a href='data:file/txt;based64{b64}' download = 'refactored.py' style= 'background:linear-gradient(to right, #6a11cb,#2575fc); padding: 12px 20px; border-radius: 8px; color: white; text-align: center; font-weight: bold font-size:18px; text-decoration:none;'>📅 Download Refactored Code </a>
-      </div>
-"""
+        <div class='download-btn' style='text-align: center; padding: 10px;'>
+            <a href='data:file/txt;base64,{b64}' download='refactored.py'
+               style='background:linear-gradient(to right, #6a11cb, #2575fc);
+                      padding: 12px 20px; border-radius: 8px; color: white;
+                      text-align: center; font-weight: bold;
+                      font-size:18px; text-decoration:none;'>
+                📅 Download Refactored Code
+            </a>
+        </div>
+    """
 
 def optimized_code(code):
     suggestions = []

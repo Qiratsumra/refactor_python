@@ -249,8 +249,8 @@ st.markdown("""
             <br>
             Senior Student
         <div class='social-icons'>
-            <a href="https://github.com/qiratsumra"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png target="_blank""></a>
-            <a href="https://www.linkedin.com/in/qirat-saeed-8048662b7/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" target="_blank"></a>
+            <a href="https://github.com/qiratsumra"><i class="icon-github"></i> icon-github</a>
+            <a href="https://www.linkedin.com/in/qirat-saeed-8048662b7/"></a>
         </div>
             </div>
 """, unsafe_allow_html=True)

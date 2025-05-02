@@ -184,4 +184,4 @@ st.markdown("""
             <a href="https://www.linkedin.com/in/qirat-saeed-8048662b7/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
         </div>
             </div>
-""")
+""", unsafe_allow_html=True)

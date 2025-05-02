@@ -79,8 +79,8 @@ st.markdown("""
                 margin-top: 10px;
                   }
         .social-icon img {
-               height: 30px;
-               width: 30px;
+               height:30px;
+               width:30px;
                margin: 0 10px;
                transition: transform 0.2s ease-in-out;
 }

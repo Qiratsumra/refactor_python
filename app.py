@@ -41,7 +41,7 @@ st.markdown("""
             
             .footer { text-align: center; font-size:14px; color: #aaa; margin-top:40px; }
 
-            .social-icon img {width:25px; margin: 0 5px; vertical-align: middle;}
+            .social-icon img {height:50px;width:25px; margin: 0 5px; vertical-align: middle;}
             </style>
 """, unsafe_allow_html=True)
 
